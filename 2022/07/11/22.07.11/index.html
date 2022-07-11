@@ -20,28 +20,31 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="这里是我认识的一部分伙计，还有一部分弃坑了，所以下面列举的都是可以正常访问的最后更新时间：2021-6-26   inSoraSky BLOG —— You R in Sora’s FOREST  LiarOnce ——LiarOnce的小站  Zander Alastor —— では、ゲームを始めましょう  Bgsn2014 ——Bgsn2014的博客  QQ foating ice —— 一">
-<meta property="og:type" content="website">
-<meta property="og:title" content="友人帐">
-<meta property="og:url" content="http://example.com/Friends/index.html">
+<meta name="description" content="之前在极坐标分解中，横向加速度$\vec a_\theta &#x3D; (2\frac{dr}{dt}\frac{d\theta}{dt}+r\frac{d^{2}\theta}{dt^{2}})\vec e_\theta$，其中的$2\frac{dr}{dt}\frac{d\theta}{dt}$也就是科里奥利加速度一直没完全理解，这几天翻看力学教材的时候突发奇想，貌似想通了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="科里奥利加速度的简单理解">
+<meta property="og:url" content="http://example.com/2022/07/11/22.07.11/index.html">
 <meta property="og:site_name" content="Wencheng&#39;s blog">
-<meta property="og:description" content="这里是我认识的一部分伙计，还有一部分弃坑了，所以下面列举的都是可以正常访问的最后更新时间：2021-6-26   inSoraSky BLOG —— You R in Sora’s FOREST  LiarOnce ——LiarOnce的小站  Zander Alastor —— では、ゲームを始めましょう  Bgsn2014 ——Bgsn2014的博客  QQ foating ice —— 一">
+<meta property="og:description" content="之前在极坐标分解中，横向加速度$\vec a_\theta &#x3D; (2\frac{dr}{dt}\frac{d\theta}{dt}+r\frac{d^{2}\theta}{dt^{2}})\vec e_\theta$，其中的$2\frac{dr}{dt}\frac{d\theta}{dt}$也就是科里奥利加速度一直没完全理解，这几天翻看力学教材的时候突发奇想，貌似想通了。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-04T12:04:02.000Z">
-<meta property="article:modified_time" content="2022-06-28T01:27:32.367Z">
+<meta property="og:image" content="http://example.com/photo/keliaoli01.png">
+<meta property="og:image" content="http://example.com/photo/keliaoli02.png">
+<meta property="article:published_time" content="2022-07-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-11T17:03:08.523Z">
 <meta property="article:author" content="Zhang Wencheng">
+<meta property="article:tag" content="力学">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/photo/keliaoli01.png">
 
 
-<link rel="canonical" href="http://example.com/Friends/">
+<link rel="canonical" href="http://example.com/2022/07/11/22.07.11/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"http://example.com/Friends/index.html","path":"Friends/index.html","title":"友人帐"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":"","permalink":"http://example.com/2022/07/11/22.07.11/","path":"2022/07/11/22.07.11/","title":"科里奥利加速度的简单理解"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>友人帐 | Wencheng's blog
-</title>
+<title>科里奥利加速度的简单理解 | Wencheng's blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2WGTSQJ2X"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-Y2WGTSQJ2X","only_pageview":false}</script>
@@ -220,64 +223,120 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/11/22.07.11/">
 
-    
-    
-    
-    <div class="post-block" lang="en"><header class="post-header">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Zhang Wencheng">
+      <meta itemprop="description" content="了解 理解 深入">
+    </span>
 
-<h1 class="post-title" itemprop="name headline">友人帐
-</h1>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wencheng's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          科里奥利加速度的简单理解
+        </h1>
 
-<div class="post-meta-container">
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-07-11 00:00:00" itemprop="dateCreated datePublished" datetime="2022-07-11T00:00:00+08:00">2022-07-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-07-12 01:03:08" itemprop="dateModified" datetime="2022-07-12T01:03:08+08:00">2022-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">普通物理</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body">
-          <blockquote>
-<p><strong>这里是我认识的一部分伙计，还有一部分弃坑了，所以下面列举的都是可以正常访问的</strong><br>最后更新时间：2021-6-26</p>
-</blockquote>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>之前在极坐标分解中，横向加速度$\vec a_\theta = (2\frac{dr}{dt}\frac{d\theta}{dt}+r\frac{d^{2}\theta}{dt^{2}})\vec e_\theta$，其中的$2\frac{dr}{dt}\frac{d\theta}{dt}$也就是科里奥利加速度一直没完全理解，这几天翻看力学教材的时候突发奇想，貌似想通了。</p>
+<span id="more"></span>
 <hr>
-<p><strong><a target="_blank" rel="noopener" href="https://www.sorasky.in/">inSoraSky BLOG</a></strong><br> —— You R in Sora’s FOREST</p>
-<hr>
-<p><strong><a target="_blank" rel="noopener" href="https://www.liaronce.com/">LiarOnce</a></strong><br> ——LiarOnce的小站</p>
-<hr>
-<p><strong><a target="_blank" rel="noopener" href="https://alastor.top/">Zander Alastor</a></strong><br> —— では、ゲームを始めましょう</p>
-<hr>
-<p><strong><a target="_blank" rel="noopener" href="https://blog.bgsnd.com/">Bgsn2014</a></strong><br> ——Bgsn2014的博客</p>
-<hr>
-<p><strong><a target="_blank" rel="noopener" href="https://qqfloatingice.top/">QQ foating ice</a></strong><br> —— 一个不知道什么时候会回迁的备用站</p>
-<hr>
-<p><strong><a target="_blank" rel="noopener" href="https://post.cplus8.com/">西普拉斯驿站</a></strong><br> —— 一个神秘的驿站</p>
-<hr>
+<p>先引用一下百度词条对科里奥利加速度的描述：</p>
 <blockquote>
-<p><strong>这里是暂时无法访问的伙计</strong></p>
+<p>科里奥利加速度（<em>Coriolis acceleration</em>），又名科氏加速度，在转动参考系中，物体在做牵连运动的同时，沿旋转半径做相对运动，由牵连运动和相对运动交互耦合而形成的加速度称为科里奥利加速度。</p>
 </blockquote>
-<hr>
-<p>——暂无</p>
-<hr>
-<blockquote>
-<p>如果友链有变动以及如果需要<strong>交换</strong>友链请注明相关信息(如下示例)<br>发送至我的<a href="mailto:Makotoz.me@outlook.com"><strong>邮箱</strong></a>，在确认后我会立即加入</p>
-<blockquote>
-<p><strong>网站名称</strong>:<code>Wencheng&#39;s blog</code><br><strong>网站地址</strong>:<code>https://andinme.github.io</code><br><strong>网站描述</strong>:<code>您好！</code></p>
-</blockquote>
-</blockquote>
+<p>我第一次看到这段对科里奥利加速度（以下简称<strong>科氏加速度</strong>）的描述，仅仅只是知道他是存在于转动参考系中的，而当我看到上文所提到的$2\frac{dr}{dt}\frac{d\theta}{dt}$时，更加是不知所云。径向速度$\frac{dr}{dt}$乘角速度$\frac{d\theta}{dt}$？前面的2又是代表着啥？而今天在翻看教材惯性力部分时，将一个转动参考系画在纸上时，方才恍然大悟。</p>
+<p><img src="/photo/keliaoli01.png" alt="图大概是这样的"></p>
+<p>如图所示我们设一转动参考系<em>S</em>，该参考系角速度朝向屏幕外侧且大小为$\omega$，在<em>S</em>系下有一小球（红色圆形表示）正在伴随着<em>S</em>一同转动的同时，相对<em>S</em>由<em>S</em>的转动中心沿着某一半径以速度$v$向外侧做匀速径向直线运动。我们也知道在我们的静止参考系中，小球正做着螺旋线运动，而且在静止参考系看来该小球的运动规矩正好是一条阿基米德螺线，当然这不是我们分析的重点。<br>回到<em>S</em>系中，我们的小球正在向外侧运动，小球的转动半径在不断增加，又因为小球有着与<em>S</em>系相同的角速度$\omega$，那么此刻小球的切向速度正在伴随着转动半径的增加而增大，先设小球切向速度为$v’$，转动半径为$r$，那么很容易得到$v’=\omega·r$，所以我们可以得到小球在切向的加速度便为$a_1=\frac{dv’}{dt}=\frac{d\omega·r}{dt}=\omega\frac{dr}{dt}=\frac{dr}{dt}\frac{d\theta}{dt}$<br>但是我们发现这里我们仅仅只是得到了一个$\frac{dr}{dt}\frac{d\theta}{dt}$，而在公式中我们却是$2\frac{dr}{dt}\frac{d\theta}{dt}$，那这个二倍是怎么回事呢？<br>其实我们在上面仅仅只是考虑了小球相对于转动的<em>S</em>系由于向外运动产生的切向加速度，而实际上对于静止参考系的我们来说小球还伴随着<em>S</em>系旋转了一段微小角度$d\theta$</p>
+<p><img src="/photo/keliaoli02.png" alt="这里是微小角度，图中大小只是方便理解"></p>
+<p>于是我们的小球还存在一个径向速度的变化量$dv’’=vd\theta$。所以还存在一个加速度$a_2=\frac{dv’’}{dt}=\frac{vd\theta}{dt}=\frac{dr}{dt}\frac{d\theta}{dt}$</p>
+<p>综上所述，科氏加速度的一部分是由于沿旋转半径做相对运动产生的$a_1$，以及另一部分由于牵连转动产生的$a_2$，两者相互耦合而成的，所以我们的科氏加速度$a_{Cor}=2\frac{dr}{dt}\frac{d\theta}{dt}=2\omega v$便得出来了。</p>
 
-      </div>
-      
-      
-      
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8A%9B%E5%AD%A6/" rel="tag"># 力学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/10/04/21.10.04/" rel="prev" title="夜不寐">
+                  <i class="fa fa-chevron-left"></i> 夜不寐
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>
@@ -338,7 +397,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
