@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#3d55a7">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#3d55a7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="题目 1：不倒的杆 目的： 1）研究物体&#x2F;装置的平衡原理；2）制作一个能够帮助杆在风力等作用下稳定不倒的实际应用装置或实验研究装置。要求：1）设计实验方案（含原理）；2）制作一个实验装置，实现杆在风力等作用下的稳定不倒；3）给出实验结果，量化抵御外部作用的能力，讨论不确定度。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于共振原理的“不倒的杆”简单结构设计">
+<meta property="og:url" content="http://example.com/2023/03/27/23.03.27/index.html">
+<meta property="og:site_name" content="ManSing&#39;s blog">
+<meta property="og:description" content="题目 1：不倒的杆 目的： 1）研究物体&#x2F;装置的平衡原理；2）制作一个能够帮助杆在风力等作用下稳定不倒的实际应用装置或实验研究装置。要求：1）设计实验方案（含原理）；2）制作一个实验装置，实现杆在风力等作用下的稳定不倒；3）给出实验结果，量化抵御外部作用的能力，讨论不确定度。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/photo/gzg01.png">
+<meta property="og:image" content="http://example.com/photo/gzg02.png">
+<meta property="og:image" content="http://example.com/photo/gzg03.png">
+<meta property="og:image" content="http://example.com/photo/gzg04.png">
+<meta property="og:image" content="http://example.com/photo/gzg05.png">
+<meta property="og:image" content="http://example.com/photo/gzg06.png">
+<meta property="og:image" content="http://example.com/photo/gzg07.png">
+<meta property="og:image" content="http://example.com/photo/gzg08.png">
+<meta property="article:published_time" content="2023-03-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-04-07T15:08:36.199Z">
+<meta property="article:author" content="ManSing">
+<meta property="article:tag" content="力学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/photo/gzg01.png">
+
+
+<link rel="canonical" href="http://example.com/2023/03/27/23.03.27/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":"","permalink":"http://example.com/2023/03/27/23.03.27/","path":"2023/03/27/23.03.27/","title":"基于共振原理的“不倒的杆”简单结构设计"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>基于共振原理的“不倒的杆”简单结构设计 | ManSing's blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2WGTSQJ2X"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-Y2WGTSQJ2X","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ManSing's blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Heard Understand Deepen</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">3</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-about"><a href="/About/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-work"><a href="/Works/" rel="section"><i class="fa fa-pen fa-fw"></i>Work</a></li>
+        <li class="menu-item menu-item-links"><a href="/Friends/" rel="section"><i class="fa fa-link fa-fw"></i>Links</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ManSing"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">ManSing</p>
+  <div class="site-description" itemprop="description">了解 理解 深入</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/andinme" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;andinme" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ManSing03@163.com" title="E-Mail → mailto:ManSing03@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/@planck_zh" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;@planck_zh" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/177969749" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;177969749" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/27/23.03.27/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ManSing">
+      <meta itemprop="description" content="了解 理解 深入">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ManSing's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          基于共振原理的“不倒的杆”简单结构设计
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-03-27 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-27T00:00:00+08:00">2023-03-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-07 23:08:36" itemprop="dateModified" datetime="2023-04-07T23:08:36+08:00">2023-04-07</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>题目 1：不倒的杆</p>
+<p>目的：</p>
+<p>1）研究物体/装置的平衡原理；<br>2）制作一个能够帮助杆在风力等作用下稳定不倒的实际应用装置或实验研究装置。<br>要求：<br>1）设计实验方案（含原理）；<br>2）制作一个实验装置，实现杆在风力等作用下的稳定不倒；<br>3）给出实验结果，量化抵御外部作用的能力，讨论不确定度。</p>
+<span id="more"></span>
+<hr>
+<p>对于风力作用下的杆，由于顺风向的脉动风荷载将使得杆结构在顺风方向产生受迫振动。考虑在微小幅度振动下，初步研究先不记其重力对振动的影响，且先考虑单一风向均匀分布的风荷载，因此可将模型初步简化成杆受单侧变化均布荷载的作用下的振动。在不记重力影响的情况下可进一步将模型简化类比为仅有一固定端约束的简支梁在均布荷载下的受力分析。</p>
+<p>欲研究杆的共振，则需先得到杆的固有频率，下面将计算固有频率：</p>
+<p>单独对该杆在无阻尼自由振动下研究，对于如下杆模型，取广义坐标$\delta$，则有，</p>
+<img src="/photo/gzg01.png" width="10%" height="10%">
+
+<p>$<br>\begin{cases}<br> T=\frac{1}{6}m\dot{\delta}^2\<br> V=E_{pG}(\delta)+E_{pK}(\delta)\<br>\end{cases}<br>$</p>
+<p>其中$E_{pG}$为杆的重力势能，$E_{pK}$，为振动过程中储存在杆内的“弹性势能”，取杆在静止时的重力势能为零，忽略振动过程中重力势能的变化，则得到拉格朗日函数，</p>
+<p>$$<br>L(\delta)=T-V=\frac{1}{6}m\dot{\delta}^2-E_{pK}(\delta)<br>$$</p>
+<p>求解拉格朗日方程，</p>
+<p>$$<br>\frac{d}{dt}(\frac{\partial L}{\partial \dot{\delta}})-\frac{\partial L}{\partial \delta}=0 \<br>\Rightarrow \frac{1}{3}m\ddot{\delta}+\frac{d E_{pK}(\delta)}{d\delta}=0<br>$$</p>
+<img src="/photo/gzg02.png" width="10%" height="10%">
+
+<p>因此想要得到杆的固有频率需要找到振动过程中由于杆的弯曲储存在杆内的能量，上面提到我们可以把杆模型类比成均布荷载下仅有一固定端约束的简支梁。</p>
+<img src="/photo/gzg03.png" width="50%" height="50%">
+
+<p>那么杆的弯曲在每一时刻产生的弯曲储存的能量等同于施加某一大小的均布荷载对使杆弯曲到这一弯曲形态下荷载所做的功，任取杆上一段弯曲分析。</p>
+<p>设杆总长为$L$，对于杆$l$处截面$O$由于杆的弯曲，取上端杆分析，下端杆在左侧对上端杆产生拉力，在右侧对上端杆产生压力，从而形成一对力偶，其力偶矩$M_{O}$和作用在上端杆的均布荷载产生的力矩$M_{q}$平衡，有，$M_{q}=M_{O}$,其中$M_{q}$可看作分布荷载作用在上端杆长度中心处的集中力产生的力矩，则有，<br>$M_{q}=\frac{1}{2}q{(L-l)}^{2}$</p>
+<p>接下来讨论$M_{O}$的表达式。如图4，在$O$截面附近截取一段弯曲的杆，设中性面长度（该杆弯曲前原长）$l_{0}$，弯曲角度为$\theta$，弯曲曲率半径为$\rho$，则可以写出下式，</p>
+<p>$$<br>\frac{\Delta l_{0}}{l_{0}}=\frac{(\rho +y)\theta -\rho\theta}{\rho\theta}=\frac{y}{\rho}<br>$$</p>
+<img src="/photo/gzg04.png" width="50%" height="50%">
+
+<p>根据材料弹性模量$E$的定义，有$E=\frac{\sigma}{\varepsilon}=\frac{F/S}{\Delta l_{0}/l_{0}}$<br>则，</p>
+<p>$$<br>\begin{aligned}<br>dF&amp;=ES\cdot \frac{y}{\rho }\<br>=E\frac{y}{\rho }dydx<br>\end{aligned}<br>$$</p>
+<p>所以，$dM=ydF=E\frac{y^{2}}{\rho }dydx$</p>
+<img src="/photo/gzg05.png" width="30%" height="30%">
+
+<p>对于宽$a$长$b$的截面有</p>
+<p>$$<br> M=\frac{E}{\rho}\int_{-\frac{b}{2}}^{\frac{b}{2}}{\int_{-\frac{a}{2}}^{\frac{a}{2}}{y^{2}}dxdy} \<br> =\frac{1}{12}\frac{E}{\rho}a{b^{3}}<br>$$</p>
+<p>又有曲率半径$\rho =\frac{(1+y^{‘2})^{\frac{3}{2}}}{y^{‘’}}$，在小段弯曲上${y}^{‘2}&lt;&lt;1$，有$\rho =\frac{1}{y^{‘’}}$，则，</p>
+<p>$$<br> M_O=M=\frac{1}{12}Ey^{‘’}a{b^{3}}<br>$$</p>
+<p>回到$M_{q}=M_{O}$，加上初始条件$y’(0)=0; y’’(0)=0$便得到，</p>
+<p>$$<br>\frac{1}{2}q{(L-l)^{2}}=\frac{1}{12}Ey^{‘’}a{b^{3}}<br>\Rightarrow y^{‘’}=\frac{6q{(L-l)^{2}}}{Ea{b^{3}}}<br>\Rightarrow y(l)=\frac{q{l^{2}}}{2Ea{b^{3}}}(6{L^{2}}-4Ll+{l^{2}})<br>$$</p>
+<p>则</p>
+<p>$$<br>dW=qdl\cdot y \Rightarrow W=\int_{0}^{L}qydl \<br> =\frac{q^{2}}{3Ea{b^{3}}} \int_{0}^{L}(6{L}^{2}-4Ll+l^{2})l^{2} \<br> =\frac{4}{15}\frac{q^{2}L^{5}}{Eab^{3}} \<br>$$</p>
+<p>又因为</p>
+<p>$$<br>\delta = y(L)= \frac{3qL^{4}}{2Eab^{3}}<br>$$</p>
+<p>则</p>
+<p>$$<br>\begin{cases}<br> \delta = \frac{3qL^{4}}{2Eab^{3}}\<br> W = \frac{4}{15}\frac{q^{2}}{L^{5}}Eab^{3}\<br>\end{cases}<br>\Rightarrow W= \frac{16Eab^{3}}{135L^{3}}{\delta ^{2}}<br>$$</p>
+<p>于是，便得到了$E_{pK}$关于$\delta$表达式，即</p>
+<p>$$<br>E_{pK}(\delta)= \frac{16Eab^{3}}{135L^{3}}{\delta ^{2}}<br>$$</p>
+<p>所以杆在单侧均布荷载的作用下振动的运动微分方程可以写成</p>
+<p>$$<br>\frac{1}{3}m\ddot{\delta}+\frac{d E_{pK}(\delta)}{d\delta}=0<br>\Rightarrow \frac{1}{3}m\ddot{\delta}+\frac{32Eab^{3}}{135L^{3}}=0<br>$$</p>
+<p>则其固有频率为</p>
+<p>$$<br>\begin{aligned}<br> {\omega _{0}} =\sqrt{\frac{32Eab^{3}/135L^{3}}{m/3}} \<br> =2\sqrt{\frac{Eab^{3}}{5mL^{3}}} \<br>\end{aligned}<br>$$</p>
+<p>可以看出一个均匀质量的杆在均布荷载作用下形变（因为不同荷载下杆形变不同以至于$E_{pK}$的表达式不同，现在先考虑均布荷载情况）的固有频率和杆长$L$、截面的参数$a$、$b$有关以及材料的弹性模量$E$有关。于是要降低杆发生共振的几率，可以想办法提高杆的固有频率来应对不同脉动频率的风荷载，从上述表达式看，提高固有频率可以通过：</p>
+<p>（1）降低重心（减小有效长度$L$）；</p>
+<p>（2）寻找一个合适的截面；</p>
+<p>（3）使用刚度更强的材料。</p>
+<p>现在开始寻找解决方案：</p>
+<p>一、降低杆的重心</p>
+<p>通过上面固有频率的表达式$\omega_{0}=2\sqrt{\frac{Eab^{3}}{5mL^{3}}}$可以看到杆越短其固有频率越大，但是很明显仅仅通过缩短杆的长度并不现实，但是我们可以通过减小杆子的有效长度也就是保持杆子长度而降低杆子的重心来达到相同的效果。</p>
+<p>降低杆的重心有很多途径，比如我们可以在杆的下段采用密度较大的的材料或者我们可以使用相同材料但是将杆的下端做粗等等。综合杆的一体性，为了方便制作出成品，我们采用做一个下端粗上端细的杆的方案。</p>
+<p>这样以来杆的重心下降，不仅仅可以增加其固有频率，同时在杆受风倾斜角度较大时，重力对杆的影响就难以忽略了。这时如果在杆子的质量不变的情况下，重心越低，根据$\vec{M}=\vec{r}\times\vec{F}$，重力对转轴的力矩就越小，杆就越不容易因为受到重力的影响而倒下。如果制作的更为极端，单从降低重心的角度来看，杆子埋入固定处较深时，我们可以认为杆子倾倒时，整体可以看作绕固定点定轴转动，固定点类似转动过程中的稳心，这时如果杆子的重心下沉到稳心以下，重力对转轴的力矩反而可以进一步削弱风在固定点上端作用力对转轴的力矩，进一步削弱杆的倾倒。</p>
+<p>二、寻找一个合适的截面</p>
+<p>从先前固有频率的推导看，</p>
+<p>$$<br> M=\frac{E}{\rho}\int_{-\frac{b}{2}}^{\frac{b}{2}}{\int_{-\frac{a}{2}}^{\frac{a}{2}}{y^{2}}dxdy} \<br> =\frac{1}{12}\frac{E}{\rho}a{b^{3}}<br>$$</p>
+<p>式中积分的过程对于均质杆实际上等同于在求转动惯量关于$y$轴的惯性矩。设$I_{x}=\int_{S}{y^{2}dS}$，那么有，</p>
+<p>$$<br>\begin{aligned}<br> M&amp;=\frac{E}{\rho }\int_{S}{y^{2}dS} \<br>\end{aligned}<br>$$</p>
+<p>进一步按照上面的方法推导，可以得到$\omega_{0}=12\sqrt{\frac{EI_{x}}{5mL^{3}}}$<br>所以我们的截面需要选择一个对于$x$轴具有较大惯性矩的截面，由$I_{x}$的表达式$I_{x}=\int_{S}{y^{2}dS}$，很容易看出，当截面上的点越远离$x$轴，$I_{x}$的值越大，这样一来$\omega_{0}$便越大，越不容易产生共振。对于相同的截面面积，要让截面上的点远离$x$轴，可以采用：（1）将迎风面（$y$方向）做窄；（2）将中心部分挖空，即做成空心环状截面。</p>
+<img src="/photo/gzg06.png" width="20%" height="20%">
+
+<p>现在我们只考虑了迎风面的振动，但实际上在杆的侧面也会产生振动，和直接由一些频率的脉动风荷载激励的振动不同的是，侧面的振动是由于风流经杆后产生的涡街导致的，而相比与迎风面的共振，侧面的涡激共振产生的破坏性更大，著名的美国塔科马悬桥风毁事件的元凶便是涡激共振。</p>
+<p>考虑在侧面涡激振动便要进一步寻找侧面方向杆的固有频率，简化问题的情况下和上方迎风面求固有频率类似，但是固有频率公式中的惯性矩将由$I_{x}$变成$I_{y}$，即，<br>$w_{0’}=12\sqrt{\frac{EI_{y}}{5mL^{3}}}$<br>因此为了寻找更好的截面，还要综合涡激振动</p>
+<p>涡街振动频率公式，$f_{t}=\frac{S_{t}V}{a}$<br>其中$S_{t}$为斯特劳哈尔数，$V$是风速，$a$为迎风面的有效宽度，在一定的条件下，我们可以认为$S_{t}$为一个常数，这样侧面的涡激振动频率可以看作正比于风速和迎风宽度的倒数的乘积，即，$f\propto V\cdot {a^{-1}}$</p>
+<p>为了提高顺风方向的固有频率，我们需要把迎风面做得相对较窄，但是为了降低涡激振动的频率，我们似乎又不能让迎风面变得太窄，这样一来单从一个截面同时考量顺风方向由脉动风引起的振动和，侧面涡激振动似乎存在一定的困难，于是我们选择从杆整体分析。</p>
+<p>首先为了减小涡街的产生，我们需要一个具有弧度的表面，这样一来我们初步得到了一个，截面为一个空心圆环的杆体。由于变化迎风面的宽度和降低涡激振动的频率之间存在较为复杂的联系，我们决定在整体方面减小涡激振动，我们的解决方案决定在圆环的基础上将截面变为椭圆圆环，为了减小涡激振动，我们反过来利用不同方向的涡激振动，让截面成为一个至上而下旋转的空心椭圆环，使不同高度截面由于不同弧度产生的不同方向的涡街脱落相互制约以达到从整体上减小涡激振动。改进过程参照图7。</p>
+<img src="/photo/gzg07.png" width="50%" height="50%">
+
+<p>对于材料的选择不在我们的考虑范围，那么综合上述改良我们得到的最后方案是一个下粗上细，截面为至上而下旋转的空心椭圆环的杆体，如图8。</p>
+<img src="/photo/gzg08.png" width="20%" height="20%">
+
+<p>现在我们已经得到了杆子的基本结构，但单单是这样一个杆结构是很难保障杆能在风力作用下而不易倒下。同样可以从减小共振发生的概率的角度出发，为了防止在风力作用下杆的振动达到其共振频率，我们可以在振动的过程中添加阻尼，防止振动的频率过大。</p>
+<p>现实生活中，有很多过高的建筑都需要做防风设计，其中许多高层建筑额外安装了叫做“调谐质块阻尼器（TMD）”，俗称“风阻尼器”的仪器，其工作原理是通过将阻尼器的频率调整至和建筑的固有频率相当，当风力作用下建筑被激励振动时，风阻尼器会由于惯性等其他因素（对于不同种类的阻尼器其工作方式有一定的差别）产生的回复力使得阻尼器与建筑体振动方向相反，在振动过程中，建筑体的动能一部分被阻尼器耗散掉从而减小建筑体的振动。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8A%9B%E5%AD%A6/" rel="tag"># 力学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/10/12/22.10.12/" rel="prev" title="进动的理解">
+                  <i class="fa fa-chevron-left"></i> 进动的理解
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-atom"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ManSing</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
